@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clase file</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit" style="color: white; background-color: black;">
+  <div class="stackedit__html"><hr>
+<h3 id="html-es-el-esqueleto-del-sitio-web">HTML es el esqueleto del sitio web</h3>
+<p>Todas las páginas web tienen HTML. Es la estructura base de TODO. Imagínatelo como los pilares de una construcción.</p>
+<p>HTML te permite dividir la información del sitio web en partes (similar a las partes básicas de un documento): header (encabezado), title (título), content (contenido), footer (pie de página), subtitle (subtítulo), etc. Luego, con CSS podrás hacer la página hermosa, y con JavaScript la harás interactiva.</p>
+<p>Originalmente, los navegadores solo podían interpretar HTML. Las páginas web eran sencillas y no se usaba CSS o JavaScript. Un sitio web era un simple documento de texto plano con los elementos típicos que cualquier documento de Word tiene: títulos, listas de viñetas, párrafos, etc.</p>
+<p><img src="./85cedee2-3a9f-49b5-8bc8-d72e3fd739fc (1).png" alt="qué es html"></p>
+<h3 id="sintáxis-del-html-todo-es-tags-etiquetas.">Sintáxis del HTML: Todo es <code>&lt;Tags&gt;</code> (etiquetas).</h3>
+<p><img src="./19d14afbf957e8daa52d0d3089de403ecbc7c5e1591cb50728f3899acfd08781.gif" alt="qué es html"></p>
+<p>¿Recuerdas que Internet trabaja solo con texto?</p>
+<p>En ese sentido, HTML es un lenguaje que utiliza etiquetas (<code>&lt;tags&gt;</code>) para representar los elementos que una página web debería de tener. Un tag es simplemente una palabra que comienza con <code>&lt; &gt;</code> y termina con <code>&lt;/ &gt;</code>. Todos los tags se deben de abrir y cerrar, (los tags de cierre siempre preceden al elemento con <code>/</code>)</p>
+<p>Hay 2 tipos diferentes de tags:</p>
+<ul>
+<li>
+<p>Tags de contenedor: cuando hay contenido entre ambos tags, debes de cerrarlos con (<code>&lt;/tag&gt;</code>). Por ejemplo, para marcar un tag de texto como un párrafo, debes empezar con con (<code>&lt;p&gt;</code>) y cerrarlo al final con (<code>&lt;/p&gt;</code>).</p>
+</li>
+<li>
+<p>Tags sin contenedor: son tags independientes sin tags de cierre (<code>&lt;/ &gt;</code>). Por ejemplo, el tag para un salto de línea es (<code>&lt;br&gt;</code>).</p>
+</li>
+</ul>
+<h3 id="atributos">Atributos</h3>
+<p>Una vez definido los <code>&lt;tag&gt;</code>, podemos describir con más detalle su comportamiento asignándole atributos a esos <code>&lt;tag&gt;</code>. Por ejemplo, si queremos que nuestro documento/página HTML tenga un link a otra página, utilizamos el tag <code>&lt;a&gt;</code> y le asignamos un atributo llamado <strong>href</strong>, que permite especificar el URL de la otra página a la que queremos hacer el enlace.</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>google.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Haz clic aquí para ir a google.com<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<p>En teoría, tú debes utilizar <a href="https://github.com/breatheco-de/content/blob/master/src/assets/assets/assets/Cheat-Sheet-HTML.jpg?=true">uno de estos tags</a>. No puedes inventar tus propios tags porque el navegador no sabría cómo interpretarlas. Debes conocer el significado de cada <strong>tag HTML</strong> para utilizarlos sabiamente… ¡Pero no te preocupes, que no hay muchos! 🙂</p>
+<p>Para el título (el heading) principal del documento, se utiliza el tag <code>&lt;h1&gt;</code>. Por ejemplo: una tienda en línea podría tener una sección para la categoría de “Electrónicos”. El título de dicha categoría sería “Electrónicos” y el tag <code>&lt;h1&gt;</code> lo escribiríamos de la siguiente manera:</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Electrónicos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<h3 id="tags-anidadas">Tags Anidadas</h3>
+<p>Por último, es importante que un tag pueda tener uno o más tags en su contenido. Por ejemplo, si quisiéramos darle un <i>estilo en cursiva</i> a la palabra “electrónicos” debemos acompañar esa palabra con el tag <code>&lt;i&gt;</code>:</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">&gt;</span></span>Electrónicos<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<h2 id="espacios-vacíos-y-saltos-de-línea">Espacios vacíos y saltos de línea</h2>
+<p>Los espacios vacíos (o en blanco) y los saltos de línea son omitidos por el navegador al momento de interpretar el texto. Si escribimos cinco espacios en blanco seguidos, o uno solo, el navegador lo interpretará de la misma manera. Si queremos un salto de línea, debemos usar la etiqueta <code>&lt;br&gt;</code>. Si queremos más “espacio”, necesitamos insertar <code>&amp;nbsp;</code> por cada espacio en blanco (sí, es raro, pero es así).</p>
+<p><strong>Estas tres alternativas se van a ver iguales (espacios y saltos de líneas van a ser ignorados):</strong></p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<p>Los saltos de línea son ignorados:</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<p>Los espacios son ignorados:</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>Hello<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tag</span><span class="token punctuation">&gt;</span></span>World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tag</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<h2 id="estructura-de-página">Estructura de página</h2>
+<p>Todas las páginas deben empezar con la declaración del <code>&lt;DOCTYPE! Html&gt;</code> seguido por los tags <code>&lt;html&gt;</code>, luego <code>&lt;head&gt;</code> y por último <code>&lt;body&gt;</code>. Estos tags <strong>deben</strong> contener otros tags dentro de ellos (etiquetas anidadas), y eso es así porque separarán la página en dos pedazos principales: el HEAD (la cabeza) y el BODY (el cuerpo):</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token comment">&lt;!-- Siempre debemos empezar con un tag HTML para demostrarle al navegador que este es un documento en formato HTML. --&gt;</span>
+
+<span class="token doctype">&lt;!DOCTYPE  html&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Dentro del tag head vamos a definir toda la información que requiere el navegador para empezar a interpretar la página. --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">&lt;!-- Dentro del tag body vamos a definir el contenido de la página. --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre>
+<p>Vamos a simular el pensamiento de un navegador: Imaginemos que una persona en su navegador (lado del cliente) está solicitando visualizar la página web:</p>
+<ul>
+<li>
+<p>El servidor abrirá un archivo HTML por defecto en el servidor. Probablemente sea index.html.</p>
+</li>
+<li>
+<p>Luego, leerá el contenido y lo interpretará como un HTML (porque la extensión del archivo es index.html).</p>
+</li>
+<li>
+<p>La persona no verá el texto que contiene el archivo, en cambio verá una interpretación visual de ese texto.</p>
+</li>
+</ul>
+<p>Como ya sabemos, dicha página va a contener, por lo menos, los siguientes tags:</p>
+<p><img src="./e8d3d49d-8c7e-4bc2-88e0-15b95a8ccc54.png" alt="learn html"></p>
+<p>|<strong>Nombre</strong> |<strong>Tags</strong> |<strong>Descripción</strong> |</p>
+<p>|:----------|:----------|:-----------------|</p>
+<p>|HTML |<code>&lt;html&gt;</code> |Debemos empezar aclarándole al navegador que esto es un documento HTML. También podemos especificar la versión de HTML que estamos utilizando. |</p>
+<p>|Head |<code>&lt;head&gt;</code> |Todo lo que esté dentro del HEAD no lo verá el usuario. Es la parte de la página en donde le dices al navegador en qué idioma está hecha la página, de qué se trata, cargas las fuentes (font type) necesarias, defines el ícono que va a tener la pestaña en el navegador y muchas otras cosas realmente importantes. |</p>
+<p>|Body |<code>&lt;body&gt;</code> |Aquí vas a colocar todo el contenido del documento que verá el usuario final.<br>Si esto fuera MS Word, el body marcaría el inicio de tu página, la primera línea del texto del documento.</p>
+<h3 id="el-head-es-como-el-sobre-de-una-carta.">El &lt;head&gt; es como el sobre de una carta.</h3>
+<p>Leemos el sobre de una carta para conocer información sobre la carta en sí misma, no sobre el contenido. En el sobre puedes enterarte de quién la escribió, en que idioma está, de dónde viene, etc.</p>
+<p>En el caso de HTML, <code>&lt;head&gt;</code> puede contener los siguientes tags (entre otros menos importantes):</p>
+<p>|<strong>Nombre</strong> |<strong>Tag</strong> |<strong>Descripción</strong> |</p>
+<p>|:----------|:---------|:-----------------|</p>
+<p>|Title |<code>&lt;title&gt;</code> |El título aparece en la ventana del navegador, también es utilizado cuando compartes la página en las redes sociales: Facebook, Twitter, Instagram, etc. Todas esas redes utilizan el título de la página como extracto por defecto para compartir cuando algún usuario copia el URL de tu página en su muro. Por último, es fundamental para SEO (Optimización para buscadores), ya que, Google le da mucha importancia dentro del contenido. |</p>
+<p>|Meta |<code>&lt;meta&gt;</code> |Los meta tags describen al documento. Se utilizan para especificar cosas como: autor, título, fecha, palabras clave, descripción, etc. Los buscadores aman los meta tags porque les permite entender mejor el contenido antes de leerlo. |</p>
+<p>|Link |<code>&lt;link&gt;</code> |Tiene como finalidad enlazar a la página con hojas de estilos CSS. Cuando veamos el capítulo de CSS, aprenderemos a crear hojas de estilos y podremos importarlas utilizando este tag. |</p>
+<p>|Style |<code>&lt;style&gt;</code> |Si no queremos o no podemos importar una hoja de estilo CSS, también tenemos la posibilidad de definir estilos en el propio documento HTML dentro de este tag. Es una práctica que no recomendamos en casi ningún escenario, solo deberías usarla cuando te veas obligado. |</p>
+<p>|Script |<code>&lt;script&gt;</code> |Se utiliza para agregar código JavaScript a la página. Todo el código JavaScript debe estar siempre contenido dentro de estos tags que también se puede utilizar en el BODY si así lo deseamos. La diferencia es que cualquier código JavaScript que coloquemos en un tag de style (estilo) ubicada en el body, no estará disponible al momento de iniciar la ejecución de la página (justo en eso es que nos ayuda el HEAD). |</p>
+<h3 id="el-body-es-similar-a-cualquier-documento-de-ms-word">El &lt;body&gt; es similar a cualquier documento de MS Word</h3>
+<p>Bien, ahora que conocimos la estructura general y necesaria de la página, vamos a revisar cuáles son los tags que podemos y debemos utilizar para definir el contenido de la misma.</p>
+<p>Recuerda -por quinceava vez- que una página web es un… ¡documento de texto! Así es, si has pensado en la respuesta antes de leerla… ¡estás entendiendo! y si no es así, pues no te preocupes, que no conozco a nadie que haya entendido HTML y CSS tan rápidamente ;).</p>
+<p>Veamos ahora en qué se compara un sitio web con un documento de Word:</p>
+<p></p>
+<p>Los tags más utilizados dentro del <code>&lt;body&gt;</code> de un documento HTML son los siguientes:</p>
+<p>|<strong>Nombre</strong> |<strong>Tags</strong> |<strong>Descripción</strong> |</p>
+<p>|:----------|:----------|:-----------------|</p>
+<p>| Head |H1, H2, H3, etc. |Define los headings y subheadings de la página (los headings no son lo mismo que el título; el título es utilizado por el navegador y se define en el tag title).<br>  <code>&lt;h1&gt;Este es un heading&lt;/h1&gt;</code> |</p>
+<p>|Párrafo |P |Este tag separa el texto que contiene con un margen superior e inferior. De esta manera simula exactamente el comportamiento de un párrafo en un documento.<code>&lt;p&gt;ejemplo de un párrafo&lt;/p&gt;</code> |</p>
+<p>|Lista |UL, OL |Las listas son fundamentales en un documento, en el caso de HTML tenemos dos tags que podemos usar para listar contenido:<br><br>  </p><li>OL: Que nos da una lista numerada (pone numeritos delante).</li><br><li>UL: Que nos da una lista sin números (pone puntos por delante).<br><br><code>&lt;ol&gt;</code><br><code>&lt;li&gt;Elemento 1&lt;/li&gt;</code><br><code>&lt;li&gt;Elemento 2&lt;/li&gt;</code><br><code>&lt;/ol&gt;</code> |</li><p></p>
+<p>|Imagen |img |Nos permite agregar imágenes al documento, pueden ser imágenes PNG, JPEG, GIF y SVG principalmente .<br><code>&lt;img src="url of the image"/&gt;</code></p>
+<p>|Link (Anchor) |a |A veces queremos conectar una o mas páginas entre ellas, enviar al usuario a otra página para continuar con el flujo o incluso poder enviarlo a otra sección del mismo documento (tal como ocurre en el menú de este curso). Para eso está el tag “Anchor”.<br><code>&lt;a href="url to resend"&gt;this is a heading&lt;/a&gt;</code> |</p>
+<p>|Negrita |strong o b |Para resaltar un texto en negritas.<br><code>&lt;strong&gt;este es un heading&lt;/strong&gt;</code> |</p>
+<p>|Cursiva |i |Para colocar un texto en formato cursiva. <br><code>&lt;i&gt;este es un heading&lt;/i&gt;</code> |</p>
+<p>|Salto de Línea |br | Para saltar el texto o contenido a la línea siguiente (similar al <code>shift+enter</code> en MS Word.)<br><code>&lt;br&gt;&lt;/br&gt;</code> |</p>
+<p>|Tablas |table |Las tablas fueron diseñadas para presentar datos de una forma legible y coherente. Tienen una headers (th), filas (tr) y columnas (td).<br><br><code>&lt;table&gt;</code><br><code>&lt;tr&gt;&lt;th&gt;Columna 1&lt;/th&gt;&lt;th&gt;Columna 2&lt;/th&gt;&lt;/tr&gt;</code><br><code>&lt;tr&gt;&lt;td&gt;Datos 1&lt;/td&gt;&lt;td&gt;Data A&lt;/td&gt;&lt;/tr&gt;</code><br><code>&lt;tr&gt;&lt;td&gt;Datos 2&lt;/td&gt;&lt;td&gt;Datos B&lt;/td&gt;&lt;/tr&gt;&lt;br&gt;</code><br><code>&lt;tr&gt;&lt;td&gt;Datos 3&lt;/td&gt;&lt;td&gt;Datos C&lt;/td&gt;&lt;/tr&gt;</code><br><code>&lt;/table&gt;</code> |</p>
+<blockquote>
+<p style="color: white;">🔗 <a href="https://www.w3schools.com/tags/ref_byfunc.asp">Haz clic aquí</a>, para más tags HTML.</p>
+</blockquote>
+<h2 id="los-atributos-propiedades">Los atributos (propiedades)</h2>
+<p>Ya sabemos que cada <code>&lt;tag&gt;</code> tiene un comportamiento diferente. Gracias a ellos podemos cambiar el tamaño de la letra - como ocurre con los headings - agregar márgenes entre párrafos, enumerar elementos, etc.</p>
+<p>Si quieres especificar más el comportamiento de una etiqueta en particular, puedes utilizar sus atributos. Para usarlos debes definirlos en el tag de apertura así:</p>
+<pre class=" language-html"><code class="prism  language-html">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>  <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.mydomain.com/myimage.png<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+
+</code></pre>
+<p>En este caso, estamos asignándole al tag <code>&lt;img&gt;</code> la propiedad “src” que indica cual es la ruta de la imagen que debe visualizarse en este contenedor.</p>
+<p>Cada tag tiene sus propiedades (no tienes que memorizarlas, siempre las conseguirás rápidamente en Internet), pero si es bueno que revises las más importantes para que las tengas a disposición en tu mente.</p>
+</div>
+</body>
+
+</html>
